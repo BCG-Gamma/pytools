@@ -312,8 +312,11 @@ class PrepareDocsDeployment(Command):
         # Replace all docs version lists with the most up-to-date to have all versions
         # accessible also from older versions
         new_versions_js = os.path.join(DIR_DOCS, "_static", "js", "versions.js")
+        print(new_versions_js)
+        print(glob(os.path.join(DIR_DOCS, "docs-version", "*", "")))
         for d in glob(os.path.join(DIR_DOCS, "docs-version", "*", "")):
             old_versions_js = os.path.join(d, "_static", "js", "versions.js")
+            print("Copying ", new_versions_js, "to ", old_versions_js)
             shutil.copyfile(src=new_versions_js, dst=old_versions_js)
 
         # remove .buildinfo which interferes with GitHub Pages build
