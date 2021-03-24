@@ -46,6 +46,24 @@ DIR_SPHINX_SOURCE_STATIC_BASE = os.path.join(DIR_SPHINX_SOURCE_BASE, "_static_ba
 JS_VERSIONS_FILE = os.path.join(DIR_SPHINX_SOURCE_STATIC_BASE, "js", "versions.js")
 DIR_ALL_DOCS_VERSIONS = os.path.join(DIR_SPHINX_BUILD, "docs-version")
 
+print(f"DIR_DOCS:", DIR_DOCS)
+
+print("Contents DIR_DOCS:")
+
+try:
+    os.listdir(DIR_DOCS)
+except:
+    pass
+
+
+print(f"DIR_ALL_DOCS:", DIR_ALL_DOCS_VERSIONS)
+print("Contents ALL_DOCS:")
+
+try:
+    os.listdir(DIR_ALL_DOCS_VERSIONS)
+except:
+    pass
+
 # Environment variables
 # noinspection SpellCheckingInspection
 ENV_PYTHON_PATH = "PYTHONPATH"
