@@ -51,7 +51,7 @@ print(f"DIR_DOCS:", DIR_DOCS)
 print("Contents DIR_DOCS:")
 
 try:
-    os.listdir(DIR_DOCS)
+    print(os.listdir(DIR_DOCS))
 except:
     pass
 
@@ -60,7 +60,7 @@ print(f"DIR_ALL_DOCS:", DIR_ALL_DOCS_VERSIONS)
 print("Contents ALL_DOCS:")
 
 try:
-    os.listdir(DIR_ALL_DOCS_VERSIONS)
+    print(os.listdir(DIR_ALL_DOCS_VERSIONS))
 except:
     pass
 
